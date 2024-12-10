@@ -1,0 +1,73 @@
+body{
+    background-color: #ffffff;
+}
+.nav-end>.btn{
+    background-color: #FF685B;
+}
+.row h6{
+    color: #FF685B;
+}
+.row .line{
+    width: 60px;
+    height: 3px;
+    background-color: #FF685B;
+}
+button[type=btn-1]{
+    background-color:#FF685B;
+    border: none;
+}
+button[type=btn-2]{
+    border:2px solid #FF685B;
+    color: #FF685B;
+}
+.facilities{
+    margin-top: -180px;
+}
+.experts{
+    color: #FF685B;
+}
+.count p:nth-child(1){
+    color: #FF685B;
+}
+@media only screen and (max-width:1280px){
+.facilities{
+    margin-top :-50px;;
+}
+}
+.care{
+    background-color: #E5F9F7;
+}
+.department p{
+    color: #FF685B;
+} 
+.rating{
+    background-color: #26335D;
+    width: 40px;
+    height: 24px;
+}
+.rating i{
+    color: #FFCE31;
+    font-size: 12px;
+    margin-top: -15px;
+}
+@media only screen and (min-width:1400px){
+    .our{
+       width: 360px;
+    }
+    }
+h6,.care>h6{
+        color: #FF685B;
+    }
+    .end p:nth-child(1){
+        color: #FF685B;
+    }
+label{
+    background-color: #FF685B;
+    color: #ffffff;
+    border-end-end-radius: 8px;
+    border-start-end-radius: 8px;
+}
+.form>span{
+    background-color: #FF685B;
+    cursor: pointer;
+}

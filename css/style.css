@@ -1,0 +1,699 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    
+    font-family: 'Poppins',sans-serif;
+    text-decoration: none;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body{
+    width: 1450px;
+    margin: 0 auto;
+    padding: 0 ;
+    box-sizing: border-box;
+    background-color:rgb(43,42,42);
+}
+html{
+    scroll-behavior: smooth;
+}
+.container{
+    width: 100%;
+}
+.navbar{
+    width: 100%;
+    height: auto;
+    margin: 10% 0 0 0;
+}
+.nav-container{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    backdrop-filter: blur(20px) brightness(50%);
+    padding: 10px 0px 10px 0px ;
+    box-shadow: 0 0 30px #077b32;
+    border-radius: 50px;
+}
+
+.logo a{
+    color: white;
+    font-size: 3rem;
+    font-weight: bold;
+    display: flex;
+    gap: 15px;
+}
+
+.logo span{
+    color: #077b32;
+}
+
+.nav-container .menu,.links .cancel{
+    cursor: pointer;
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    color: white;
+    display: none;
+    font-size: 2rem;;
+}
+.nav-container ul{
+    display: inline-flex;
+}
+
+ul li{
+    list-style: none;
+}
+
+.nav-container ul a{
+    position: relative;
+    font-size: 1.2rem;
+    color: white;
+    margin:0 20px;
+    font-weight: 550;
+    transition: 0.3s linear;
+}
+
+.nav-container ul a::before{
+    position: absolute;
+    content: "";
+    bottom: -3px;
+    left: 0;
+    width: 0%;
+    height: 3px;
+    background-color: #077b32;
+    transition: 0.2s linear;
+}
+
+.nav-container ul a:hover::before{
+    width: 100%;
+}
+
+.nav-container ul a:hover{
+    color: #077b32;
+}
+
+.table-data button,.btn{
+    height: 45px;
+    margin: 10px;
+    background-color: #077b32;
+    border: none;
+    border-radius: 4px;
+    outline: none;
+    font-weight: 500;
+    font-size: 1rem;
+    transition: 0.2s;
+}
+
+.table-data button:hover{
+    scale: 1.1;
+    background-color: transparent;
+    border: 3px solid #077b32;
+    font-weight: 700;
+    box-shadow: 0 0 30px #077b32;
+}
+
+.btn-2 a{
+    color: aliceblue;
+    padding: 10px;
+}
+.btn-2 a:hover{
+    color: #077b32;
+}
+
+.dropdown{
+    z-index: 100;
+    position: fixed;
+    top: 0;
+    transform: translateY(-550px);
+    width: 100%;
+    height: auto;
+    backdrop-filter: blur(10px) brightness(40%);
+    transition: 0.2 linear ease-in-out;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
+}
+
+.dropdown .links a{
+    display: flex;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 0;
+    transition: 0.2s;
+    font-size: 20px;
+    transition: 0.2s;
+}
+
+.dropdown .links a:hover{
+    background-color: #077b32;
+}
+header{
+    width: 100%;
+    margin-top: 8%;
+}
+
+.container-2{    
+    width: 100%;           
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    position: static;
+}
+
+
+.container-2 .image{
+    width: 420px;
+    overflow: hidden;
+    border-radius: 100%;
+    box-shadow: #077b32 0px 0px 40px;
+    z-index: -1;
+}
+
+.container-2 img{
+    width: 100%;
+}
+
+.container-2 .content{
+    width: 40%;
+    color: aliceblue;
+    min-height: 100px;
+}
+
+.content>h1{
+    font-size: clamp(1rem, 1rem + 10vw, 1.8rem);
+    font-weight: 500;
+}
+
+.content h1 span{
+    color: #077b32;
+    text-shadow: 0 0 3px #077b32;
+}
+
+.content .rotating{
+    font-size: clamp(2rem, 2rem + 10vw, 2.3rem);
+    font-weight: 400;
+    display: flex;
+    flex-direction: column;
+    height: 45px;
+    overflow: hidden;
+}
+
+.content .rotating span{
+    transform: translate(100px,-48px);
+    z-index: -1;
+}
+.content .rotating-text{
+    color: #077b32;
+    text-shadow: 0 0 4px #077b32;
+    font-weight: 600;
+    line-height: 45px;
+}
+
+.rotating-text:first-child{
+    animation: slide 8s infinite;
+}
+
+@keyframes slide {
+    0%{
+        margin-top: 0;
+    }
+    25%{
+        margin-top: -45px;
+    }
+    50%{
+        margin-top: -90px;
+    }
+    75%{
+        margin-top: -135px;
+    }
+    100%{
+        margin-top: -180px;
+    }
+}
+
+.content p{
+    font-size: clamp(0.6rem, 0.4rem + 9vw, 1.2rem);
+    margin: 10px 0;
+}
+
+.social-links i{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 3rem;
+    height: 3rem;
+    background-color: white;
+    font-size: 1.5rem;
+    border-radius: 50%;
+    color: #077b32;
+    margin: 10px 15px;
+    transition: 0.2s linear;
+}
+
+.social-links .twitter:hover{
+    color: white;
+    scale: 1.3;
+    background-color: #1da1f2;
+    filter: drop-shadow(0 0 10px #077b32);
+}
+.social-links .facebook:hover{
+    color: white;
+    scale: 1.3;
+    background-color: #316ff6;
+    filter: drop-shadow(0 0 10px #077b32);
+}
+.social-links .instagram:hover{
+    color: white;
+    scale: 1.3;
+    background-color: #d62976;
+    filter: drop-shadow(0 0 10px #077b32);
+}
+
+.content .btn{
+    width: 50%;
+    height: 45px;
+    margin:30px 0 0 16px;
+    background-color: #077b32;
+    border: none;
+    border-radius: 4px;
+    outline: none;
+    font-size: 1.5rem;
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+.content .btn:hover{
+    scale: 1.1;
+    background-color: transparent;
+    border: 3px solid #077b32;
+    font-weight: 700;
+    box-shadow: 0 0 30px #077b32;
+}
+
+.content a,.table-data .btn a{
+    color: white;
+    font-weight: 500;
+}
+.content a:hover,.table-data .btn a:hover{
+    color:#077b32;
+    font-weight: 700;
+}
+
+@media(max-width:885px){
+    html{
+        scroll-behavior: smooth;
+    }
+    body{
+        width:100%;
+    }
+    
+    nav .logo a{
+        position: absolute;
+        top: 16px;
+        left: 15px;
+        font-size: 1.5rem;
+    }
+    .nav-container{
+        backdrop-filter: none;
+        box-shadow: none;
+        width: 100%;
+        height: 60px;
+        top: 0;
+        border-radius: 0px;
+        backdrop-filter: blur(20px) brightness(40%);
+    }
+    .container-2{
+        flex-wrap: wrap;
+    }
+    .content .rotating span{
+        transform: translate(90px,-48px);
+    }
+    .nav-container .menu, .links .cancel{
+        display: block;
+        padding-right: 15px;
+    }
+
+    .nav-container button{
+        width: 18%;
+        height: 60%;
+        font-size: 15px;
+        margin-left: 30%;
+    }
+    
+    .nav-container ul{
+        display: none;
+    }
+
+    .container-2 .content{
+        width: 80%;
+        padding: 20px 0 0 ;
+    }
+    .social-links{
+        width: 2.5rem;
+        height: 2.5rem;
+        font-size: 1.5rem;
+        display: flex;
+    }
+    .container-2 .image{
+        z-index: -1;
+        margin-top: 30px;
+        width: 50%;
+        height: 80%;
+    }
+    .details{
+        flex-wrap:wrap;
+        align-items: center;
+        row-gap: 25px;
+    }.edu-levels{
+        flex-wrap: wrap;
+        text-align: left;
+        row-gap: 25px;
+    }
+    .works{
+        flex-wrap: wrap;
+        text-align: center;
+        row-gap: 40px;
+    }
+    .works .work-1:hover{
+        background-color:none;
+    }
+    .skills-iknow .skill label{
+        font-size: 13px;
+    }
+    .contact-right{
+        display: none;
+    }
+    .contact-left .contact-inputs{
+        width: 100%;
+    }
+    .top-go .top{
+        margin-bottom: 20px;
+    }
+    table{
+        font-size: 20px;
+    }
+    .progress{
+    margin-top: 26%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 5%;
+    color: #0d0e0d;
+}
+}
+
+@media(max-width:440px){
+    html{
+        scroll-behavior: smooth;
+    }
+    .container-2 .image{
+        width: 50%;
+        height: 40%;
+    }
+
+    .nav-container .logo{
+        font-size: 18px;
+    }
+
+    .nav-container button{
+        width: 19%;
+        height: 60%;
+        font-size: 8px;
+        margin-left: 50%;
+    }
+
+    .content h1{
+        font-size: 24px;
+    }
+
+    .content .rotating{
+        font-size: 30px;
+    }
+
+    .container-2 .content{
+        width: 80%;
+    }
+
+    .container-2 button .btn{
+        margin-top: 15px;
+    }
+    progress[value]{
+        height: 10px;
+        background-color: #077b32;
+    }
+}
+
+.about-me,.educate,.folio{               
+    margin: 30px 0;
+    display: flex;
+    flex-direction: column;
+    padding: 0px 9%;
+    margin-top: 50px;
+    row-gap: 20px;
+    color: white;
+
+}
+.line-1{
+    width: 40px;
+    height: 4px;
+    background: white;
+}
+.about-me h2,.skill h3,.educate h4,.folio h5,.contact-container h6{
+    font-size: 3rem;
+    font-weight: 500;
+    color: #077b32;
+}
+/* .about-me p{
+    font-size: clamp(0.6rem, 0.4rem + 9vw, 1.2rem);
+} */
+.tool p{
+    color: #077b32;
+    font-weight: 600;
+}
+.about-me p:nth-child(2){
+    font-size: 30px;
+}
+.about-me p:nth-child(2) span{
+    color: #077b32;
+    text-shadow: #077b32 0px 0px 40px;
+    font-weight: 600;
+}
+.details{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 20px;
+}
+
+table{
+    text-align: left;
+    margin-right: 20px;
+}
+table th{
+    color: white;
+    font-weight: 500;
+}
+table td{
+    color: #077b32;
+    overflow-wrap:anywhere;
+}
+.skills-iknow{
+    display: flex;
+    column-gap: 15px;
+}
+.skill{
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;
+    color:white;
+    text-align: left;
+}
+.progress{
+    margin-top: 24%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10%;
+    color: #0d0e0d;
+}
+h3{
+    color: #fbfcfc;
+}
+
+progress[value]{
+    height: 10px;
+    background-color: #077b32;
+}
+
+.table-data .btn{
+    height: 45px;
+    margin: 10px;
+    background-color: #077b32;
+    border: none;
+    border-radius: 4px;
+    outline: none;
+    color: white;
+    font-weight: 500;
+    padding: 0 20px;
+    font-size: 1rem;
+    transition: 0.2s ease-in-out;
+}
+
+.tools-icons{
+    display: flex;
+    column-gap: 20px;
+    cursor: pointer;
+}
+.tools-icons img{
+    width: 50px;
+    margin-top: 20px;
+}
+
+.table-data .btn:hover{
+    scale: 1.1;
+    background-color: transparent;
+    border: 3px solid #077b32;
+    font-weight: 700;
+    color: #077b32;
+    box-shadow: 0 0 30px #077b32;
+}
+.edu-levels{
+    display: flex;
+    column-gap: 20px;
+}
+.edu-levels .edu li{
+    font-size: 20px;
+    font-weight: 500;
+    color: #077b32;
+}
+.edu-levels .edu{
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+    column-gap: 20px;
+}
+.edu-levels .edu p{
+    font-size: 16px;
+}
+.works{
+    display: flex;
+    column-gap: 100px;
+    justify-content: center;
+    text-align: center;
+}
+.works .work-1{
+    padding: 20px;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 20px;
+    transition: 0.2s ease-in-out;
+    cursor: pointer;
+}
+h6{
+    font-size: 30px;
+    color:#077b32;
+    transition: 0.2s ease-in-out;
+}
+.works .work-1:hover{
+    box-shadow: #077b32 0px 50px 100px -20px, #077b32 0px 30px 60px -30px, #077b32 0px -2px 6px 0px inset;
+}
+.work-1>.btn{
+    height: 30px;
+    background-color: #077b32;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    outline: none;
+    font-weight: 500;
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+.work-1>.btn:hover{
+    scale: 1.0;
+    color: #077b32;
+    background-color: transparent;
+    border: 2px solid #077b32;
+    font-weight: 700;
+    box-shadow: 0 0 30px #077b32;
+}
+.works .btn a{
+    padding:15px;
+    color: white;
+    font-size: 13px;
+}
+.works .btn a:hover{
+    color: #077b32;
+    box-shadow: none;
+}
+.top-go{
+    width: 100%;
+    padding: 0 9% 7%;
+    margin: -40px 0 0 0;
+}
+.top-go a{
+   width: 40px;
+   height: 40px;
+   border-radius:50%;
+   background-color: #077b32;
+   float: right;
+}
+.top-go i{
+    padding: 10px ;
+    color: white;
+    font-size: 22px;
+    align-items: center;
+}
+
+.contact-container{  
+    height: 500px;             
+    margin: 30px 0;
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 9% 4%;
+    margin-top: 50px;
+}
+.contact-left{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 20px;
+}
+.contact-left h6 span{
+    color: white;
+}
+.contact-inputs{
+    width: 100%;
+    height: 50px;
+    border: none;
+    outline: none;
+    padding: 0 0 0 25px;
+    color: #077b32;
+    border-radius: 5px;
+}
+.contact-left textarea{
+    height: 140px;
+    margin: 15px 0 0 0;
+    padding: 15px 0 0 25px;
+}
+
+.contact-inputs:focus{
+    border: 3px solid #077b32;
+}
+.contact-inputs::placeholder{
+    color: #077b32;
+}
+.contact-left button{
+    display: flex;
+    align-items: center;
+    padding: 15px 30px;
+    font-size: 16px;
+    color: white;
+    gap: 10px;
+    cursor: pointer;
+    border: none;
+    border-radius: 50px;
+    background: linear-gradient(270deg,#0d0e0d,#077b32);
+}
